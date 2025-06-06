@@ -2,8 +2,7 @@ import Axios from "axios";
 import { useToast } from "vue-toastification";
 
 export const api = Axios.create({
-    //baseURL: 'https://api.cqrity-connect.site/api/v1',
-    baseURL: 'http://localhost:8000/api/v1/',
+    baseURL: 'https://api.cqrity-connect.site/api/v1',
     headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -18,8 +17,8 @@ api.interceptors.request.use(
         if (token) {
             config.headers['Authorization'] = `Bearer ${token}`;
         }
-
         return config;
+
     },
 );
 
