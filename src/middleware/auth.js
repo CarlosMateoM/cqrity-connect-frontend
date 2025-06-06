@@ -25,6 +25,6 @@ export const guestUser = async (to, from, next) => {
     if (!authStore.isLoggedIn) {
         next();
     } else {
-        next({ name: 'vehicles' });
+        next({ name: 'users.home' });
     }
 }
