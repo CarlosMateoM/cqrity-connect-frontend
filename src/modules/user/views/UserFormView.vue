@@ -140,14 +140,19 @@
 
     const { execute, isLoading } = useRequest(
         async () => {
+
+            const isActiveValue = values.isActive;
+            setFieldValue('isActive', isActiveValue  ? 1 : 0);
+
             if (route.name === 'users.edit') {
-                const isActiveValue = values.isActive;
-                setFieldValue('isActive', isActiveValue  ? 1 : 0);
                 const response = await updateUser(route.params.id, values);
                 setFieldValue('isActive', isActiveValue);
                 return response;
             }
-            return await createUser(values)
+            
+            const response = await createUser(values);
+            setFieldValue('isActive', isActiveValue);
+
         },
         {
             onSuccess: (response) => {
