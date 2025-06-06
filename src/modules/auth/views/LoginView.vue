@@ -32,8 +32,8 @@
     const { values, errors, setErrors, defineField, handleSubmit } = useForm({
         validationSchema: loginSchema,
         initialValues: {
-            email: 'admin@correo.com',
-            password: 'admin'
+            email: '',
+            password: ''
         }
     });
 

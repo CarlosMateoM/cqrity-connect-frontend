@@ -15,7 +15,7 @@ export const echo = new Echo({
     authEndpoint: 'https://api.cqrity-connect.site/api/v1/broadcasting/auth',
     auth: {
         headers: {
-            Authorization: `Bearer 1|16UtrOLTqbWK1ktxiALpqn7OI1BDrS8ku1iIT8Ree76521df`,
+            Authorization: `Bearer ${localStorage.getItem('token') || ''}`,
         },
     }, 
 });
