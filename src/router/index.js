@@ -7,6 +7,10 @@ import accessLogRoutes from '@/modules/accessLog/routes/accessLogRoutes'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      redirect: { name: 'login' },
+    },
     ...userRoutes,
     ...authRoutes,
     ...accessLogRoutes
