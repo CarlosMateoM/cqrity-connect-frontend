@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import './base.css';
+
+
+/* 
+    Rojo vibrante 
+    Gris oscuro 
+    Gris claro / neutro 
+    Gris verdoso 
+    Verde oscuro
+*/
+
+@theme {
+    --color-primary: #d5312b;
+    --color-secondary: #3B3936;
+    --color-accent: #2b2e2f;
+    --color-muted: #889C9B;
+    --color-deep: #486966;
+}

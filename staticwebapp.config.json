@@ -1,0 +1,14 @@
+{
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": [
+            "images/*",
+            "/js/*",
+            "/css/*",
+            "/favicon.ico"
+        ]
+    },
+    "mimeTypes": {
+        "custom": "text/html"
+    }
+}
