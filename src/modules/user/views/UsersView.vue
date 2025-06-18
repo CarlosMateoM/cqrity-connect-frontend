@@ -28,7 +28,20 @@
 
         </div>
 
-        <div v-for="user in users?.data" :key="user.id" class="flex w-full gap-8 border border-gray-200 p-2">
+         <div v-if="isLoading" v-for="i in 10" class="w-full flex gap-8 border border-gray-200 p-2 mb-4 rounded animate-pulse">
+
+            <div class="w-44 h-28 bg-gray-200   " >
+
+            </div>
+
+            <div class="flex-grow" >
+                <div class="h-6 bg-gray-200 mb-2 rounded w-full"> 
+
+                </div>
+            </div>
+        </div>
+
+        <div v-else v-for="user in users?.data" :key="user.id" class="flex w-full gap-8 border border-gray-200 p-2">
 
             <img :src="user.image" alt="imagen de ejemplo" class="w-44 h-34 object-cover rounded-lg " />
 
